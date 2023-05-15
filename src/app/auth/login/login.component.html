@@ -1,8 +1,15 @@
-<h1>Login</h1>
-<form>
-  <mat-form-field>
-    <input matInput placeholder="Nome" [(ngModel)]="username">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Senha" [(ng
+<div class="container">
+  <h1>Login de Cadastro</h1>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <input matInput placeholder="Nome" formControlName="username">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Senha" formControlName="password" type="password">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="submit()">Entrar</button>
+  </form>
+</div>
+
+
 
