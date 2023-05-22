@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { CommonModule } from '@angular/common';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -23,6 +24,20 @@ const appRoutes: Routes = [
   ],
   declarations: [
     AppComponent,
+    @NgModule({
+      imports: [
+        CommonModule
+        // other imports
+      ],
+      declarations: [
+        // component declarations
+      ],
+      bootstrap: [
+        // root component
+      ]
+    })
+    export class AppModule { }
+    
     HomeComponent,
     LoginComponent,
     PageNotFoundComponent
